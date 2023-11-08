@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #00ff00; /* Green color for the text */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+    flex-direction: column; /* Set the main layout direction */
+    min-height: 100vh; /* Ensure the page takes up at least the viewport height */
+    position: relative; /* Set position to relative for stacking context */
+  }
+
+  header {
+    background-color: #333333;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  footer {
+    background-color: #333333;
+    padding: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 600px;
+    padding: 2rem;
+    text-align: left;
+    margin: 0 auto; /* Center the container */
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #ffffff; /* White color for the title */
+  }
+
+  p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+
+  .icon {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  a {
+    color: #0000ff; /* Dark blue color for the links */
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+/* Retro TV Screen Effect with Flickering, Animated White Noise, and Content Noise */
+.retro-tv {
+  background-color: #000; /* Dark background */
+  color: #fff; /* Green text */
+  /* font-family: 'Courier New', monospace;*/
+  text-shadow: 1px 1px 2px #00f, -1px -1px 2px #00f, 1px -1px 2px #00f, -1px 1px 2px #00f; /* Glowy text effect */
+  border: 10px solid #333; /* Chunky border */
+  padding: 20px; /* Some space inside */
+  box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.5); /* Inner glow and outer glow */
+  animation: flicker 2s infinite alternate; /* Flickering animation */
+  position: relative; /* Required for the distortion overlay */
+  overflow: hidden; /* Hide overflow for lines */
+  height: 90%;
 }
 
-.App-logo {
-  height: 40vmin;
+.retro-tv::before {
+  content: "";
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  right: -5%;
+  bottom: -5%;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEUlEQVR42gP4DwMMpqIFEAH/AA0pKADo3BBrqQAAAABJRU5ErkJggg==') repeat;
+  opacity: 0.2; /* Adjust opacity as desired */
   pointer-events: none;
+  z-index: -1;
+  animation: noise-animation 1s infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes noise-animation {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(5px, -5px); } /* Adjust values for noise movement */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }
 }
 
-.App-link {
-  color: #61dafb;
+.noise {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10 /* make sure it overlays the content */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#noiseCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15; /* Adjust opacity as desired */
+}
+
+.corner-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle, transparent 60%, black 100%);
+  pointer-events: none; /* So it doesn't interfere with clicks */
+}
+
+.retro-tv::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEUlEQVR42gP4DwMMpqIFEAH/AA0pKADo3BBrqQAAAABJRU5ErkJggg==') repeat;
+  opacity: 0.1; /* Adjust opacity as desired */
+  pointer-events: none;
+  z-index: -2;
 }
