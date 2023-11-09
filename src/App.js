@@ -20,6 +20,7 @@ class App extends React.Component {
                     <meta name="twitter:description" content="Portfolio of Domokos Balazs: From web applications to immersive games, discover a unique blend of technology and creativity." />
                     <meta name="twitter:image" content="https://domokosbalazs.ro/images/twitterimage.jpg" />
                     <link rel="canonical" href="https://domokosbalazs.ro/" />
+                    <link rel="icon" href="https://domokosbalazs.ro/favicon.ico" />
                     {/* Additional tags as needed */}
                 </Helmet>
                 <header>
