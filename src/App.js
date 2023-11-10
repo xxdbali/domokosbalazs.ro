@@ -23,8 +23,13 @@ class App extends React.Component {
                     <link rel="icon" href="https://domokosbalazs.ro/favicon.ico" />
                     {/* Additional tags as needed */}
                 </Helmet>
+                <div class="site-header">
+                    <a href="http://www.domokosbalazs.ro" target="_blank">
+                        <img src="logo.png" alt="Domokos Balazs Logo" class="logo" />
+                    </a>
+                </div>
                 <header>
-                    <h1>Welcome to <a href="http://domokosbalazs.ro" target="_blank" rel="noopener noreferrer">domokosbalazs.ro</a></h1>
+                    <h1>Welcome to <a href="http://www.domokosbalazs.ro" target="_blank">domokosbalazs.ro</a></h1>
                 </header>
 
                 <main>
@@ -34,8 +39,8 @@ class App extends React.Component {
                         </div>
 
                         <p>
-                            <span role="img" aria-label="console">🎮</span> Aspiring sci-fi universe creator by day, <span role='img' aria-label="joystick">🕹️</span> pixel art enthusiast by night. 
-                            I code, I craft, and I bring worlds to life. If I'm not debugging, you'll find me dodging virtual 
+                            <span role="img" aria-label="console">🎮</span> Aspiring sci-fi universe creator by day, <span role='img' aria-label="joystick">🕹️</span> pixel art enthusiast by night.
+                            I code, I craft, and I bring worlds to life. If I'm not debugging, you'll find me dodging virtual
                             asteroids or plotting epic space odysseys. Let's navigate the stars together! <span role='img' aria-label="rocket">🚀</span>
                             <br /><br />
                             Connect with me on <span role='img' aria-label="earth">🌐</span><a href="https://www.linkedin.com/in/domokos-balazs/" target="_blank" rel="noopener noreferrer">LinkedIn</a> to explore more dimensions of my journey!
