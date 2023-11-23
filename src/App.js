@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import './App.css';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
+import PortfolioPage from './components/PortfolioPage';
 import {
     BrowserRouter as Router,
     Routes,
@@ -35,20 +36,20 @@ class App extends React.Component {
                 <Router>
                     <div className="master-frame">
                         <header>
-                            <div class="header-content">
-                                <div class="header-logo">
+                            <div className="header-content">
+                                <div className="header-logo">
                                     <a href="http://www.domokosbalazs.ro" target="_blank">
                                         <img src="logo.png" alt="Domokos Balazs Logo" width="100px" />
                                     </a>
                                 </div>
-                                <div class="header-title">
+                                <div className="header-title">
                                     <h1>DOMOKOSBALAZS.RO</h1>
                                 </div>
                                 <nav>
-                                    <div class="header-menu">
+                                    <div className="header-menu">
                                         <div className="header-menu-item"><Link to="/">Home</Link></div>
                                         <div className="header-menu-item"><Link to="/about">About Me</Link></div>
-                                        <div className="header-menu-item">Portfolio</div>
+                                        <div className="header-menu-item"><Link to="/portfolio">Portfolio</Link></div>
                                         <div className="header-menu-item">Resume</div>
                                         <div className="header-menu-item">Blog</div>
                                         <div className="header-menu-item">Testimonials</div>
@@ -66,6 +67,7 @@ class App extends React.Component {
                             <Routes>
                                 <Route path="/" element={<HomePage />} />
                                 <Route path="/about" element={<AboutPage />} />
+                                <Route path="/portfolio" element={<PortfolioPage />} />
                             </Routes>
                         </main>
 

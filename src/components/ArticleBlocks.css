@@ -16,6 +16,8 @@
     /* color: #DA52AE; */
     color: #817170;
     margin-top: 30px;
+    text-align: justify;
+    hyphens:    auto;
 }
 
 .info-list-item>.header-line {

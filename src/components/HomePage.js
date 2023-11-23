@@ -14,7 +14,10 @@ class HomePage extends React.Component {
                         <div className="info-list-item">
                             <div className="header-line"></div>
                             <h2>LOVE</h2>
-                            🎮 Aspiring sci-fi universe creator by day, 🕹️ pixel art enthusiast by night.
+                            🎮Experienced in computer science with a fervent passion for game development. 
+                            I excel in creating immersive 2D and 3D games, blending technical skill with 
+                            creativity to craft captivating virtual experiences. Dedicated to innovating 
+                            and enriching the gaming world.🕹️
                         </div>
                         <div className="info-list-item">
                             <div className="header-line"></div>
