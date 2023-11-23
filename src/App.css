@@ -29,7 +29,6 @@ html {
   scrollbar-color: #400B34 #E38DEB; /* thumb and track color */
 }
 
-
 body {
   margin: 0;
   padding: 0;
@@ -200,7 +199,150 @@ main {
   align-items: center;
 }
 
+.icon {
+  display: inline-block;
+  margin-right: 5px;
+}
 
+a {
+  color: #0000ff;
+  /* Dark blue color for the links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(23, 23, 27, 1) 30%, rgba(60, 33, 94, 1) 50%, rgba(51, 50, 55, 1) 65%);
+  width: 100%;
+}
+
+.header-content {
+  /* New wrapper for flex items */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-foot-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(43, 50, 66, 1) 0%, rgba(138, 80, 102, 1) 22%, rgba(130, 50, 143, 1) 48%, rgba(47, 43, 53, 1) 65%);
+}
+
+.header-logo,
+.header-title {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  width: 100px;
+  /* Adjust as needed */
+}
+
+.header-title h1 {
+  margin-left: 10px;
+  /* Space between logo and title */
+  font-size: 1.2em;
+  /* Adjust as needed */
+}
+
+.header-menu {
+  display: flex;
+  color: #F0F0F1;
+  margin-right: 10px;
+}
+
+.header-menu-item {
+  margin-left: 20px;
+  /* Space between menu items */
+  cursor: pointer;
+  /* Changes cursor on hover */
+}
+
+
+footer {
+  background-color: #03030D;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-head-line {
+  width: 100%;
+  height: 2px;
+  background-color: #110a20;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  /* Aligns children's heights */
+}
+
+.info-list {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  padding: 0;
+  margin: 50px;
+}
+
+.info-list-item {
+  display: flex;
+  flex-direction: column;
+  /* Aligns children in a vertical stack */
+  align-items: flex-start;
+  /* Aligns children to the start of the flex container */
+  width: 100%;
+  /* color: #DA52AE; */
+  color: #817170;
+  margin-top: 30px;
+}
+
+.info-list-item>.header-line {
+  width: 100%;
+  height: 2px;
+  background-color: #110a20;
+  margin-bottom: 10px;
+}
+
+.info-list-item>a {
+  color: #DA52AE;
+}
+
+.info-list-item>h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  color: #F0F0F1;
+  /* Adjust as needed */
+}
+
+.info-list>h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  color: #EAEDF4;
+  /* Adjust as needed */
+}
+
+.three-d-plane-container {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 .icon {

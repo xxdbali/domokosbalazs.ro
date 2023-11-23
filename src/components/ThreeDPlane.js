@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
-const ThreeDPlane = () => {
+const ThreeDPlane = ({modelName}) => {
   const mountRef = useRef(null);
 
   useEffect(() => {
@@ -15,10 +15,25 @@ const ThreeDPlane = () => {
 
     mountRef.current.appendChild(renderer.domElement);
 
-    // Plane geometry
-    const geometry = new THREE.PlaneGeometry(30, 30, 16, 16);
-    const material = new THREE.MeshBasicMaterial({ color: 0xF34BB9, wireframe: true });
-    const plane = new THREE.Mesh(geometry, material);
+    let geometry
+    let material
+    let plane
+
+    switch (modelName) {
+      case "about": {
+        geometry = new THREE.PlaneGeometry(10, 10, 16, 16);
+        material = new THREE.MeshBasicMaterial({ color: 0xF34BB9, wireframe: true });
+        plane = new THREE.Mesh(geometry, material);
+        break
+      }
+      default: {
+        geometry = new THREE.PlaneGeometry(30, 30, 16, 16);
+        material = new THREE.MeshBasicMaterial({ color: 0xF34BB9, wireframe: true });
+        plane = new THREE.Mesh(geometry, material);
+        break
+      }
+    }
+
     scene.add(plane);
 
     camera.position.z = 30;
@@ -49,7 +64,9 @@ const ThreeDPlane = () => {
 
     // Cleanup function
     return () => {
-      mountRef.current.removeChild(renderer.domElement);
+      if (mountRef.current && mountRef.current.contains(renderer.domElement)) {
+        mountRef.current.removeChild(renderer.domElement);
+      }
     };
   }, []);
 
