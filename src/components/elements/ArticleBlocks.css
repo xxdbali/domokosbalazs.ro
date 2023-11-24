@@ -1,6 +1,6 @@
 .info-list {
     display: flex;
-    width: 30%;
+    flex: 3;
     flex-direction: column;
     padding: 0;
     margin: 50px;
@@ -25,6 +25,15 @@
     height: 2px;
     background-color: #110a20;
     margin-bottom: 10px;
+}
+
+.info-list-item>.header-title {
+    display: flex;
+    flex-direction: row;
+}
+.info-list-item>.header-title>.title-text {
+    display: flex;
+    margin-left: 10px;
 }
 
 .info-list-item>a {

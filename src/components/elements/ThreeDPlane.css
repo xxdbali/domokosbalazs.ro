@@ -1,0 +1,6 @@
+.three-d-plane-container {
+    display: flex;
+    flex: 7;
+    justify-content: center;
+    align-items: center;
+}

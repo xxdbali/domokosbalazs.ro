@@ -1,7 +1,6 @@
 import React from 'react';
 import './PortfolioPage.css';
-import './ArticleBlocks.css';
-import ThreeDPlane from './ThreeDPlane';
+import ThreeDPlane from './elements/ThreeDPlane';
 
 class PortfolioPage extends React.Component {
     render() {
@@ -26,14 +25,17 @@ class PortfolioPage extends React.Component {
                         </div>
                         <div className="info-list-item">
                             <div className="header-line"></div>
+                            <h2>MOBILE PROJECTS</h2>
+                            Check out my mobile projects on 📱<a href="https://domokos.itch.io/" target="_blank" rel="noopener noreferrer">itch.io</a>
+                        </div>
+                        <div className="info-list-item">
+                            <div className="header-line"></div>
                             <h2>COOPERATION</h2>
                             Check out our gamedev crew page on 🐦
                             <a href="https://sakergames.com/" target="_blank" rel="noopener noreferrer">sakergames.com</a>
                         </div>
                     </div>
-                    <div className="three-d-plane-container">
-                        <ThreeDPlane modelName="portfolio"/>
-                    </div>
+                    <ThreeDPlane modelName="portfolio"/>
                 </div>
             </>
         );

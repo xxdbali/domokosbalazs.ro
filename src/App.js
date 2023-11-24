@@ -12,6 +12,7 @@ import {
 } from 'react-router-dom';
 
 
+
 class App extends React.Component {
     render() {
         return (
@@ -50,7 +51,7 @@ class App extends React.Component {
                                         <div className="header-menu-item"><Link to="/">Home</Link></div>
                                         <div className="header-menu-item"><Link to="/about">About Me</Link></div>
                                         <div className="header-menu-item"><Link to="/portfolio">Portfolio</Link></div>
-                                        <div className="header-menu-item">Resume</div>
+                                        <div className="header-menu-item"><Link to="/resume">Resume</Link></div>
                                         <div className="header-menu-item">Blog</div>
                                         <div className="header-menu-item">Testimonials</div>
                                         <div className="header-menu-item">Skills</div>
@@ -63,7 +64,6 @@ class App extends React.Component {
                         </header>
 
                         <main>
-                            {/* Your menu here */}
                             <Routes>
                                 <Route path="/" element={<HomePage />} />
                                 <Route path="/about" element={<AboutPage />} />

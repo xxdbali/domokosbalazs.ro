@@ -2,33 +2,12 @@
   font-family: "Quicksand";
   src: url("./../public/Quicksand-VariableFont_wght.ttf");
 }
-/* For the scrollbar itself */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-/* For the scrollbar track */
-::-webkit-scrollbar-track {
-  background: #E38DEB; /* Track color */
-}
-
-/* For the scrollbar handle */
-::-webkit-scrollbar-thumb {
-  background: #400B34; /* Handle color */
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #300D29; /* Handle hover color */
-}
-
-/* Firefox scrollbar customization */
-html {
-  scrollbar-width: thin; /* "auto", "thin", or "none" */
-  scrollbar-color: #400B34 #E38DEB; /* thumb and track color */
-}
-
+/* Importing an external CSS file */
+@import url('./components/elements/PageScrolling.css');
+@import url('./components/elements/ArticleBlocks.css');
+/***********************************************
+ Content part 
+ ***********************************************/
 body {
   margin: 0;
   padding: 0;
@@ -57,22 +36,26 @@ body {
   flex-direction: column;
   background-color: #01010B;
   width: 100%; /* Full width by default */
-  height: 100%; /* Full height by default */
+  min-height: 100vh; /* Minimum height is full viewport height */
   padding: 0; /* No padding by default */
+  flex-grow: 1; /* Allows the container to grow if the content is larger than the viewport */
 }
 
 /* Media query for larger screens (like desktops) */
 @media (min-width: 768px) {
   .master-frame {
       width: 90%;
-      height: 90%;
+      height: auto; /* Change this to 'auto' to allow for dynamic height */
       margin: auto; /* Center the content */
       padding: 0; /* Adjust padding as needed */
   }
 }
 
+/***********************************************
+ Header part 
+ ***********************************************/
 header {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(23, 23, 27, 1) 30%, rgba(60, 33, 94, 1) 50%, rgba(51, 50, 55, 1) 65%);
+  background: linear-gradient(120deg, rgba(0, 0, 0, 1) 0%, rgba(23, 23, 27, 1) 30%, rgb(84, 46, 130) 50%, rgba(51, 50, 55, 1) 65%);
   width: 100%;
 }
 
@@ -101,9 +84,16 @@ header {
 
 .header-title h1 {
   margin-left: 10px;
-  /* Space between logo and title */
-  font-size: 1.2em;
-  /* Adjust as needed */
+  font-size: min(1.5em, 8vw);
+  font-weight: 1000;
+  width: max-content;
+  text-align: center;
+  background-color: rgb(255, 178, 62);
+  background-image: linear-gradient(268.67deg, rgb(219, 189, 255) 3.43%, rgb(203, 160, 255) 15.69%,rgb(170, 105, 249) 55.54%, rgb(139, 44, 255) 99%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0px;
 }
 
 .header-menu {
@@ -119,6 +109,9 @@ header {
   /* Changes cursor on hover */
 }
 
+/***********************************************
+ Footer part 
+ ***********************************************/
 
 footer {
   background-color: #03030D;
@@ -140,210 +133,6 @@ main {
   align-items: center;  
   width: 100%;
 }
-
-.content-wrapper {
-  display: flex;
-  width: 100%;
-  align-items: stretch; /* Aligns children's heights */
-}
-
-.info-list {  
-  display: flex;
-  width: 30%;
-  flex-direction: column;
-  padding: 0;
-  margin: 50px;
-} 
-
-.info-list-item {
-  display: flex;
-  flex-direction: column; /* Aligns children in a vertical stack */
-  align-items: flex-start; /* Aligns children to the start of the flex container */
-  width: 100%;
-  /* color: #DA52AE; */
-  color: #817170;
-  margin-top: 30px;
-}
-
-.info-list-item > .header-line {
-  width: 100%;
-  height: 2px;
-  background-color: #110a20;
-  margin-bottom: 10px;
-}
-
-.info-list-item > a {
-  color: #DA52AE;
-}
-
-.info-list-item > h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 1.2em;  
-  color: #F0F0F1;
-  /* Adjust as needed */
-}
-
-.info-list > h3 {
-  margin: 0;
-  padding: 0;
-  font-size: 1em;  
-  color: #EAEDF4;
-  /* Adjust as needed */
-}
-
-.three-d-plane-container {
-  width: 70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.icon {
-  display: inline-block;
-  margin-right: 5px;
-}
-
-a {
-  color: #0000ff;
-  /* Dark blue color for the links */
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-header {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(23, 23, 27, 1) 30%, rgba(60, 33, 94, 1) 50%, rgba(51, 50, 55, 1) 65%);
-  width: 100%;
-}
-
-.header-content {
-  /* New wrapper for flex items */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-foot-line {
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(43, 50, 66, 1) 0%, rgba(138, 80, 102, 1) 22%, rgba(130, 50, 143, 1) 48%, rgba(47, 43, 53, 1) 65%);
-}
-
-.header-logo,
-.header-title {
-  display: flex;
-  align-items: center;
-}
-
-.header-logo img {
-  width: 100px;
-  /* Adjust as needed */
-}
-
-.header-title h1 {
-  margin-left: 10px;
-  /* Space between logo and title */
-  font-size: 1.2em;
-  /* Adjust as needed */
-}
-
-.header-menu {
-  display: flex;
-  color: #F0F0F1;
-  margin-right: 10px;
-}
-
-.header-menu-item {
-  margin-left: 20px;
-  /* Space between menu items */
-  cursor: pointer;
-  /* Changes cursor on hover */
-}
-
-
-footer {
-  background-color: #03030D;
-  width: 100%;
-  text-align: center;
-}
-
-.footer-head-line {
-  width: 100%;
-  height: 2px;
-  background-color: #110a20;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.content-wrapper {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-  /* Aligns children's heights */
-}
-
-.info-list {
-  display: flex;
-  width: 30%;
-  flex-direction: column;
-  padding: 0;
-  margin: 50px;
-}
-
-.info-list-item {
-  display: flex;
-  flex-direction: column;
-  /* Aligns children in a vertical stack */
-  align-items: flex-start;
-  /* Aligns children to the start of the flex container */
-  width: 100%;
-  /* color: #DA52AE; */
-  color: #817170;
-  margin-top: 30px;
-}
-
-.info-list-item>.header-line {
-  width: 100%;
-  height: 2px;
-  background-color: #110a20;
-  margin-bottom: 10px;
-}
-
-.info-list-item>a {
-  color: #DA52AE;
-}
-
-.info-list-item>h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 1.2em;
-  color: #F0F0F1;
-  /* Adjust as needed */
-}
-
-.info-list>h3 {
-  margin: 0;
-  padding: 0;
-  font-size: 1em;
-  color: #EAEDF4;
-  /* Adjust as needed */
-}
-
-.three-d-plane-container {
-  width: 70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 
 .icon {
   display: inline-block;

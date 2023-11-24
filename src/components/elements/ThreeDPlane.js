@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import './ThreeDPlane.css';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 
 const ThreeDPlane = ({ modelName }) => {
@@ -37,8 +38,8 @@ const ThreeDPlane = ({ modelName }) => {
             // Scale the model
             object.scale.set(3, 3, 3); // 0.1, 0.1, 0.1
             object.position.y -= 1.5;
-            object.position.x -= 0; 
-            object.position.z -= -20; 
+            object.position.x -= 0;
+            object.position.z -= -20;
 
             scene.add(object);
           },
@@ -64,7 +65,7 @@ const ThreeDPlane = ({ modelName }) => {
             // Scale the model
             object.scale.set(1.5, 1.5, 1.5); // 0.1, 0.1, 0.1
             object.position.y -= 15;
-            object.position.x -= -4; 
+            object.position.x -= -4;
 
             scene.add(object);
           },
@@ -140,7 +141,7 @@ const ThreeDPlane = ({ modelName }) => {
         //       geometry.attributes.position.needsUpdate = true;
         //   }
         // });
-        
+
       }
 
       // ----------------------------
@@ -168,7 +169,9 @@ const ThreeDPlane = ({ modelName }) => {
     };
   }, []); // Empty dependency array means this effect runs once on mount
 
-  return <div ref={mountRef} />;
+  return <div className="three-d-plane-container">
+    <div ref={mountRef} />
+  </div>;
 };
 
 export default ThreeDPlane;

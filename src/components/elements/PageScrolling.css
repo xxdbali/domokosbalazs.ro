@@ -1,0 +1,42 @@
+/* For the scrollbar itself */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* For the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #E38DEB;
+}
+
+/* For the scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background: #400B34;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #300D29;
+}
+
+/* Firefox scrollbar customization */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #400B34 #E38DEB;
+    overflow-y: scroll;
+}
+
+/*********************************************** 
+No Scrollbars at all
+*/
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+/* body::-webkit-scrollbar {
+    display: none;
+} */
+
+/* Hide scrollbar for IE, Edge and Firefox */
+/* body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+} */
