@@ -23,6 +23,168 @@ const ThreeDPlane = ({ modelName }) => {
     let object
 
     switch (modelName) {
+      case "skillsGameMechanics": {
+        const loader = new OBJLoader();
+        loader.load(
+          'gears.obj', // Replace with the path to your OBJ file
+          (objectLoaded) => {
+            object = objectLoaded;
+            // Wireframe material
+            const material = new THREE.MeshBasicMaterial({ color: 0xF34BB9, wireframe: true });
+            object.traverse((child) => {
+              if (child.isMesh) child.material = material;
+            });
+
+            // Scale the model
+            object.scale.set(3.5, 3.5, 3.5); // 0.1, 0.1, 0.1
+            object.position.y -= 2;
+            object.position.x -= 2;
+            object.position.z -= -18;
+
+            scene.add(object);
+          },
+          (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+          (error) => console.error('An error happened', error)
+        );
+
+        break;
+      }
+
+      case "skillsPixelArt": {
+        const loader = new OBJLoader();
+        loader.load(
+          'sword.obj', // Replace with the path to your OBJ file
+          (objectLoaded) => {
+            object = objectLoaded;
+            // Wireframe material
+            const material = new THREE.MeshBasicMaterial({ color: 0xF34BB9, wireframe: true });
+            object.traverse((child) => {
+              if (child.isMesh) child.material = material;
+            });
+
+            // Scale the model
+            object.scale.set(3, 3, 3); // 0.1, 0.1, 0.1
+            object.position.y -= 5 ;
+            object.position.x -= 2;
+            object.position.z -= -18  ;
+
+            scene.add(object);
+          },
+          (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+          (error) => console.error('An error happened', error)
+        );
+
+        break;
+      }
+
+      case "skillsReact": {
+        const loader = new OBJLoader();
+        loader.load(
+          'reactjs.obj', // Replace with the path to your OBJ file
+          (objectLoaded) => {
+            object = objectLoaded;
+            // Wireframe material
+            const material = new THREE.MeshBasicMaterial({ color: 0xF34BB9, wireframe: true });
+            object.traverse((child) => {
+              if (child.isMesh) child.material = material;
+            });
+
+            // Scale the model
+            object.scale.set(3, 3, 3); // 0.1, 0.1, 0.1
+            object.position.y -= 0 ;
+            object.position.x -= 2;
+            object.position.z -= -18  ;
+
+            scene.add(object);
+          },
+          (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+          (error) => console.error('An error happened', error)
+        );
+
+        break;
+      }
+
+      case "skillsBun": {
+        const loader = new OBJLoader();
+        loader.load(
+          'bun.obj', // Replace with the path to your OBJ file
+          (objectLoaded) => {
+            object = objectLoaded;
+            // Wireframe material
+            const material = new THREE.MeshBasicMaterial({ color: 0xF34BB9, wireframe: true });
+            object.traverse((child) => {
+              if (child.isMesh) child.material = material;
+            });
+
+            // Scale the model
+            object.scale.set(2, 2, 2); // 0.1, 0.1, 0.1
+            object.position.y -= 4 ;
+            object.position.x -= 0;
+            object.position.z -= -15  ;
+
+            scene.add(object);
+          },
+          (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+          (error) => console.error('An error happened', error)
+        );
+
+        break;
+      }
+
+      case "skillsNode": {
+        const loader = new OBJLoader();
+        loader.load(
+          'nodejs.obj', // Replace with the path to your OBJ file
+          (objectLoaded) => {
+            object = objectLoaded;
+            // Wireframe material
+            const material = new THREE.MeshBasicMaterial({ color: 0xF34BB9, wireframe: true });
+            object.traverse((child) => {
+              if (child.isMesh) child.material = material;
+            });
+
+            // Scale the model
+            object.scale.set(2, 2, 2); // 0.1, 0.1, 0.1
+            object.position.y -= 4 ;
+            object.position.x -= 3;
+            object.position.z -= -15  ;
+
+            scene.add(object);
+          },
+          (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+          (error) => console.error('An error happened', error)
+        );
+
+        break;
+      }
+
+      case "skillsUnity": {
+        const loader = new OBJLoader();
+        loader.load(
+          'unity.obj', // Replace with the path to your OBJ file
+          (objectLoaded) => {
+            object = objectLoaded;
+            // Wireframe material
+            const material = new THREE.MeshBasicMaterial({ color: 0xF34BB9, wireframe: true });
+            object.traverse((child) => {
+              if (child.isMesh) child.material = material;
+            });
+
+            // Scale the model
+            object.scale.set(1, 1, 1); // 0.1, 0.1, 0.1
+            object.position.y -= 4 ;
+            object.position.x -= 5;
+            object.position.z -= -18  ;
+
+            scene.add(object);
+          },
+          (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+          (error) => console.error('An error happened', error)
+        );
+
+        break;
+      }
+
       case "testimonials": {
         const loader = new OBJLoader();
         loader.load(

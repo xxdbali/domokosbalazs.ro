@@ -7,6 +7,7 @@ import PortfolioPage from './components/PortfolioPage';
 import ResumePage from './components/ResumePage';
 import BlogPage from './components/BlogPage';
 import TestimonialsPage from './components/TestimonialsPage';
+import SkillsPage from './components/SkillsPage';
 
 import {
     BrowserRouter as Router,
@@ -58,9 +59,9 @@ class App extends React.Component {
                                         <div className="header-menu-item"><Link to="/resume">Resume</Link></div>
                                         <div className="header-menu-item"><Link to="/blog">Blog</Link></div>
                                         <div className="header-menu-item"><Link to="/testimonials">Testimonials</Link></div>
-                                        <div className="header-menu-item">Skills</div>
-                                        <div className="header-menu-item">Services</div>
-                                        <div className="header-menu-item">Contact</div>
+                                        <div className="header-menu-item"><Link to="/skills">Skills</Link></div>
+                                        <div className="header-menu-item"><Link to="/services">Services</Link></div>
+                                        <div className="header-menu-item"><Link to="/contact">Contact</Link></div>
                                     </div>
                                 </nav>
                             </div>
@@ -75,6 +76,9 @@ class App extends React.Component {
                                 <Route path="/resume" element={<ResumePage />} />
                                 <Route path="/blog" element={<BlogPage />} />
                                 <Route path="/testimonials" element={<TestimonialsPage />} />
+                                <Route path="/skills" element={<SkillsPage />} />
+                                <Route path="/services" element={<SkillsPage />} />
+                                <Route path="/contact" element={<SkillsPage />} />
                             </Routes>
                         </main>
 

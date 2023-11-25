@@ -1,6 +1,10 @@
 import React from 'react';
 import './BlogPage.css';
 import ThreeDPlane from './elements/ThreeDPlane';
+import { Helmet } from 'react-helmet';
+
+const BASE_URL = process.env.REACT_APP_BASE_URL || 'https://www.yourdomain.com';
+
 
 class BlogPage extends React.Component {
     render() {
@@ -12,12 +16,23 @@ class BlogPage extends React.Component {
                             <h3>BLOG</h3>
                             <div className="info-list-item">
                                 <div className="header-line"></div>
-                                <h2> Introducing "Reverse Pongineer": My Latest Game!</h2>
-                                I'm thrilled to announce the launch of "Reverse Pongineer"! This 2D pixel art space defense game is finally here to challenge and entertain you.
-                                In "Reverse Pongineer," you're defending your space base against invading alien ships. It's an exhilarating blend of strategy and action. Manage your energy wisely to shoot bullets and deploy nukes – every decision counts in this cosmic battle!
-                                Creating this game has been a fantastic journey, blending nostalgic pixel art with modern gameplay. I can't wait for you to experience the thrill and challenge it offers.
-                                Dive into "Reverse Pongineer" now and join the space defense adventure!
-                                Check out the reverse ponginner 🎮<a href="https://domokos.itch.io/reverse-pongineer" target="_blank" rel="noopener noreferrer">domokos.itch.io/reverse-pongineer</a>
+
+                                <article>
+                                    <Helmet>
+                                        <title>Introducing "Reverse Pongineer": My Latest Game!</title>
+                                        <meta name="description" content="Creating this game has been a fantastic journey, blending nostalgic pixel art with modern gameplay." />
+                                        <meta property="og:title" content='Introducing "Reverse Pongineer"' />
+                                        <meta property="og:description" content="Creating this game has been a fantastic journey, blending nostalgic pixel art with modern gameplay." />
+                                        <meta property="og:image" content={`${BASE_URL}$/logo.png`} />
+                                        {/* todo this helmet part must be moved to a separate unique patf of the site */}
+                                    </Helmet>
+                                    <h2> Introducing "Reverse Pongineer": My Latest Game!</h2>
+                                    I'm thrilled to announce the launch of "Reverse Pongineer"! This 2D pixel art space defense game is finally here to challenge and entertain you.
+                                    In "Reverse Pongineer," you're defending your space base against invading alien ships. It's an exhilarating blend of strategy and action. Manage your energy wisely to shoot bullets and deploy nukes – every decision counts in this cosmic battle!
+                                    Creating this game has been a fantastic journey, blending nostalgic pixel art with modern gameplay. I can't wait for you to experience the thrill and challenge it offers.
+                                    Dive into "Reverse Pongineer" now and join the space defense adventure!
+                                    Check out the reverse ponginner 🎮<a href="https://domokos.itch.io/reverse-pongineer" target="_blank" rel="noopener noreferrer">domokos.itch.io/reverse-pongineer</a>
+                                </article>
                             </div>
                         </div>
                         <ThreeDPlane modelName="blog" />

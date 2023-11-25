@@ -20,24 +20,25 @@ class HomePage extends React.Component {
                         </div>
                         <div className="info-list-item">
                             <div className="header-line"></div>
-                            <h2>CONNECT</h2>
-                            Connect with me on 🌐<a href="https://www.linkedin.com/in/domokos-balazs/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            <h2>Stay Connected</h2>
+                            <p>Join my professional network on <a href="https://www.linkedin.com/in/domokos-balazs/" target="_blank" rel="noopener noreferrer">LinkedIn 🌐</a> and let's exchange ideas!</p>
                         </div>
                         <div className="info-list-item">
                             <div className="header-line"></div>
-                            <h2>CREATINOS</h2>
-                            Check out my game creations on 🎮<a href="https://domokos.itch.io/" target="_blank" rel="noopener noreferrer">itch.io</a>
+                            <h2>Creative Gaming</h2>
+                            <p>Explore my unique game designs and creative projects on <a href="https://domokos.itch.io/" target="_blank" rel="noopener noreferrer">itch.io 🎮</a>.</p>
                         </div>
                         <div className="info-list-item">
                             <div className="header-line"></div>
-                            <h2>JOIN</h2>
-                            Join me on ▶️<a href="https://youtube.com/@DomokosBalazs" target="_blank" rel="noopener noreferrer">YouTube</a>
+                            <h2>YouTube Adventures</h2>
+                            <p>Subscribe and join me on my journey at <a href="https://youtube.com/@DomokosBalazs" target="_blank" rel="noopener noreferrer">YouTube ▶️</a> for regular updates and insights.</p>
                         </div>
                         <div className="info-list-item">
                             <div className="header-line"></div>
-                            <h2>X</h2>
-                            Tweet along with me on 🐦<a href="https://twitter.com/DomokosBalazs" target="_blank" rel="noopener noreferrer">Twitter</a>
+                            <h2>Tweet With Me</h2>
+                            <p>Follow my thoughts and engage with me on <a href="https://twitter.com/DomokosBalazs" target="_blank" rel="noopener noreferrer">Twitter 🐦</a>. Let's tweet together!</p>
                         </div>
+
                     </div>
                     <ThreeDPlane />
                 </div>

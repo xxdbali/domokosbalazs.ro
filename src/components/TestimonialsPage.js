@@ -7,9 +7,9 @@ class TestimonialsPage extends React.Component {
         return (
             <>
                 <div className="content-wrapper-testimonials">
-                    <div className="resume-summary-container">
+                    <div className="testimonials-summary-container">
                         <div className="info-list">
-                            <h3>TESTIMONIAL</h3>
+                            <h3>TESTIMONIALS</h3>
                             <div className="info-list-item">
                                 <div className="header-line"></div>
                                 <h2>MAYBE MY WIFE...</h2>

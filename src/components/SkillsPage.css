@@ -1,13 +1,13 @@
 @import url('./elements/ArticleBlocks.css');
 
-.content-wrapper-testimonials {
+.content-wrapper-skills {
     display: flex;
     flex: 1;
     align-items: stretch;
     flex-direction: column;
 }
 
-.testimonials-summary-container {
+.skills-summary-container {
     display: flex;
     flex-direction: row;
 }

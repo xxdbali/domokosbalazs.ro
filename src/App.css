@@ -106,7 +106,7 @@ header {
   margin-left: 20px;
   /* Space between menu items */
   cursor: pointer;
-  /* Changes cursor on hover */
+  font-weight: 800;
 }
 
 /***********************************************
@@ -140,7 +140,7 @@ main {
 }
 
 a {
-  color: #0000ff;
+  color: #F0F0F1;
   /* Dark blue color for the links */
   text-decoration: none;
 }
