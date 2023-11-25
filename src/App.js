@@ -27,13 +27,13 @@ class App extends React.Component {
                     <meta name="keywords" content="Domokos Balazs, Web Developer, Game Developer, Portfolio, Web Development, Game Design" />
                     <meta property="og:title" content="Domokos Balazs - Web & Game Developer" />
                     <meta property="og:description" content="Discover the portfolio of Domokos Balazs, where web development meets game design. Learn about my projects, skills, and professional journey." />
-                    <meta property="og:image" content="https://domokosbalazs.ro/images/ogimage.jpg" />
+                    <meta property="og:image" content="https://domokosbalazs.ro/ogimage.jpg" />
                     <meta property="og:type" content="website" />
                     <meta property="og:url" content="https://domokosbalazs.ro/" />
                     <meta name="twitter:card" content="summary_large_image" />
                     <meta name="twitter:title" content="Domokos Balazs - Web & Game Developer" />
                     <meta name="twitter:description" content="Portfolio of Domokos Balazs: From web applications to immersive games, discover a unique blend of technology and creativity." />
-                    <meta name="twitter:image" content="https://domokosbalazs.ro/images/twitterimage.jpg" />
+                    <meta name="twitter:image" content="https://domokosbalazs.ro/twitterimage.jpg" />
                     <link rel="canonical" href="https://domokosbalazs.ro/" />
                     <link rel="icon" href="https://domokosbalazs.ro/favicon.ico" />
                     {/* Additional tags as needed */}
