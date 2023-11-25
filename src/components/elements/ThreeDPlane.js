@@ -23,6 +23,34 @@ const ThreeDPlane = ({ modelName }) => {
     let object
 
     switch (modelName) {
+      case "contact": {
+        const loader = new OBJLoader();
+        loader.load(
+          'mail.obj', // Replace with the path to your OBJ file
+          (objectLoaded) => {
+            object = objectLoaded;
+            // Wireframe material
+            const material = new THREE.MeshBasicMaterial({ color: 0xF34BB9, wireframe: true });
+            object.traverse((child) => {
+              if (child.isMesh) child.material = material;
+            });
+
+            // Scale the model
+            object.scale.set(6, 6, 6); // 0.1, 0.1, 0.1
+            object.position.y -= 0;
+            object.position.x -= 2;
+            object.position.z -= -25;
+
+            scene.add(object);
+          },
+          (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+          (error) => console.error('An error happened', error)
+        );
+
+        break;
+      }
+
+
       case "services": {
         const loader = new OBJLoader();
         loader.load(

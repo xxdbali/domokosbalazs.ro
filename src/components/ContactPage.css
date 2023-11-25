@@ -1,0 +1,13 @@
+@import url('./elements/ArticleBlocks.css');
+
+.content-wrapper-contact {
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.contact-summary-container {
+    display: flex;
+    flex-direction: row;
+}

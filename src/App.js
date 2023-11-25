@@ -9,6 +9,7 @@ import BlogPage from './components/BlogPage';
 import TestimonialsPage from './components/TestimonialsPage';
 import SkillsPage from './components/SkillsPage';
 import ServicesPage from './components/ServicesPage';
+import ContactPage from './components/ContactPage';
 
 import {
     BrowserRouter as Router,
@@ -79,7 +80,7 @@ class App extends React.Component {
                                 <Route path="/testimonials" element={<TestimonialsPage />} />
                                 <Route path="/skills" element={<SkillsPage />} />
                                 <Route path="/services" element={<ServicesPage />} />
-                                <Route path="/contact" element={<SkillsPage />} />
+                                <Route path="/contact" element={<ContactPage />} />
                             </Routes>
                         </main>
 
