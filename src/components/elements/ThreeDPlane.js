@@ -84,7 +84,13 @@ const ThreeDPlane = ({ modelName }) => {
           (objectLoaded) => {
             object = objectLoaded;
             // Wireframe material
-            const material = new THREE.MeshBasicMaterial({ color: 0xF34BB9, wireframe: true });
+            const material = new THREE.MeshBasicMaterial({
+              color: 0xF34BB9,
+              wireframe: true,
+              transparent: true,
+              opacity: 1,
+              blending: THREE.NormalBlending
+            });
             object.traverse((child) => {
               if (child.isMesh) child.material = material;
             });
