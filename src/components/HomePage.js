@@ -7,7 +7,7 @@ class HomePage extends React.Component {
     render() {
         return (
             <>
-                <div className="content-wrapper">
+                <div className="content-wrapper-home">
                     <div className="info-list">
                         <h3>NEWS</h3>
                         <div className="info-list-item">

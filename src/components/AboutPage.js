@@ -7,7 +7,7 @@ class AboutPage extends React.Component {
     render() {
         return (
             <>
-                <div className="content-wrapper">
+                <div className="content-wrapper-about">
                     <div className="info-list">
                         <h3>ABOUT ME</h3>
                         <div className="info-list-item">

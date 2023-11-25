@@ -1,0 +1,42 @@
+# Blender 3.3.0 MTL File: 'None'
+# www.blender.org
+
+newmtl Black
+Ns 100.000015
+Ka 1.000000 1.000000 1.000000
+Kd 0.050000 0.050000 0.050000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 3
+
+newmtl Body
+Ns 100.000015
+Ka 1.000000 1.000000 1.000000
+Ks 0.200000 0.200000 0.200000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 3
+map_Kd C:/Users/xxdba/Downloads/uploads_files_725554_panalina-gr100_vintage-radio-V12/Complete_files/MainBody.jpg
+
+newmtl Chrome
+Ns 100.000015
+Ka 1.000000 1.000000 1.000000
+Kd 0.186880 0.220288 0.256000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 3
+map_Ks C:/Users/xxdba/Downloads/uploads_files_725554_panalina-gr100_vintage-radio-V12/Complete_files/Interior01.hdr
+
+newmtl Plastic
+Ns 100.000015
+Ka 1.000000 1.000000 1.000000
+Kd 0.160000 0.160000 0.160000
+Ks 0.690000 0.690000 0.690000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 3

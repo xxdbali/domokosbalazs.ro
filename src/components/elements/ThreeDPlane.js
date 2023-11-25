@@ -23,6 +23,87 @@ const ThreeDPlane = ({ modelName }) => {
     let object
 
     switch (modelName) {
+      case "testimonials": {
+        const loader = new OBJLoader();
+        loader.load(
+          'wine.obj', // Replace with the path to your OBJ file
+          (objectLoaded) => {
+            object = objectLoaded;
+            // Wireframe material
+            const material = new THREE.MeshBasicMaterial({ color: 0xF34BB9, wireframe: true });
+            object.traverse((child) => {
+              if (child.isMesh) child.material = material;
+            });
+
+            // Scale the model
+            object.scale.set(3, 3, 3); // 0.1, 0.1, 0.1
+            object.position.y -= 5;
+            object.position.x -= 0;
+            object.position.z -= -17;
+
+            scene.add(object);
+          },
+          (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+          (error) => console.error('An error happened', error)
+        );
+
+        break;
+      }
+
+      case "blog": {
+        const loader = new OBJLoader();
+        loader.load(
+          'radio.obj', // Replace with the path to your OBJ file
+          (objectLoaded) => {
+            object = objectLoaded;
+            // Wireframe material
+            const material = new THREE.MeshBasicMaterial({ color: 0xF34BB9, wireframe: true });
+            object.traverse((child) => {
+              if (child.isMesh) child.material = material;
+            });
+
+            // Scale the model
+            object.scale.set(4, 4, 4); // 0.1, 0.1, 0.1
+            object.position.y -= 1;
+            object.position.x -= -1.9;
+            object.position.z -= -20;
+
+            scene.add(object);
+          },
+          (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+          (error) => console.error('An error happened', error)
+        );
+
+        break;
+      }
+
+      case "resume": {
+        const loader = new OBJLoader();
+        loader.load(
+          'SuitCasePainted.obj', // Replace with the path to your OBJ file
+          (objectLoaded) => {
+            object = objectLoaded;
+            // Wireframe material
+            const material = new THREE.MeshBasicMaterial({ color: 0xF34BB9, wireframe: true });
+            object.traverse((child) => {
+              if (child.isMesh) child.material = material;
+            });
+
+            // Scale the model
+            object.scale.set(2, 2, 2); // 0.1, 0.1, 0.1
+            object.position.y -= -0.5;
+            object.position.x -= -1.5;
+            object.position.z -= -18;
+
+            scene.add(object);
+          },
+          (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+          (error) => console.error('An error happened', error)
+        );
+
+        break;
+      }
+
       case "portfolio": {
         const loader = new OBJLoader();
         loader.load(

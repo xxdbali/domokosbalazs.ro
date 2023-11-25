@@ -1,9 +1,15 @@
-.info-list {
+.info-list, .info-list-horizontal {
     display: flex;
     flex: 3;
     flex-direction: column;
     padding: 0;
     margin: 50px;
+}
+
+.info-list-horizontal {
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .info-list-item {

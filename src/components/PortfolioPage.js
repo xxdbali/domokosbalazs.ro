@@ -6,7 +6,7 @@ class PortfolioPage extends React.Component {
     render() {
         return (
             <>
-                <div className="content-wrapper">
+                <div className="content-wrapper-portfolio">
                     <div className="info-list">
                         <h3>PORTFOLIO</h3>
                         <div className="info-list-item">

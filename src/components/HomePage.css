@@ -1,6 +1,6 @@
 @import url('./elements/ArticleBlocks.css');
 
-.content-wrapper {
+.content-wrapper-home {
     display: flex;
     width: 100%;
     align-items: stretch;

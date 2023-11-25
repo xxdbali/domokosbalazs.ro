@@ -1,0 +1,13 @@
+@import url('./elements/ArticleBlocks.css');
+
+.content-wrapper-testimonials {
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.resume-summary-container {
+    display: flex;
+    flex-direction: row;
+}
