@@ -1,0 +1,12 @@
+# Blender 3.3.0 MTL File: 'None'
+# www.blender.org
+
+newmtl 10299_Monkey_Wrench_v1
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Users/xxdba/Downloads/Monkey_Wrench_v3_L3.123c576f4bf0-288f-4dd7-baa2-f1513ddb8e34/Monkey_Wrench_v3_L3.123c576f4bf0-288f-4dd7-baa2-f1513ddb8e34/10299_Monkey-Wrench_v1_Diffuse.jpg

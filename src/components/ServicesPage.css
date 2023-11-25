@@ -1,0 +1,13 @@
+@import url('./elements/ArticleBlocks.css');
+
+.content-wrapper-services {
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.services-summary-container {
+    display: flex;
+    flex-direction: row;
+}
